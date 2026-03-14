@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honorable Photos | Photo Missing</title>
+	
+    <link rel="icon" href="Photos Logo.png" type="image/png">
+	
+    <link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Photo Missing</div>
+        <ul class="nav-links">
+            <li><a href="Final-Project.html">Home</a></li>
+            <li><a href="Final-Project.html#gallery">Vlogs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+   <header class="post-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bluecloud.jpg');">
+        <div class="hero-content">
+            <span class="category">Honorable</span>
+            <h1>Photos Compilation</h1>
+            <p>Behind the lens of every frame is a story waiting to be told.</p>
+        </div>
+    </header>
+
+    <article class="container post-content">
+        <div class="post-text">
+            <p>All the photo that are Honorable.</p> 
+			<p>All of this photo was taken from my <a href="https://www.dpreview.com/products/fujifilm/compacts/fuji_finepixa610" target="_blank" rel="noopener noreferrer">Fuji Fiml FinePix A610</a>The first Digital camera I own.</p>
+			<p>This Camera started the hobby im in "All Thank you Fuji Finepix a610.</p>
+
+        </div>
+
+        <div class="photo-showcase">
+            
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="boiz3.jpg" alt="The party..."></div>
+                <div class="showcase-text">
+                    <h3>The party...</h3>
+                    <p>Good time</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="boiz2.jpg" alt="hug life"></div>
+                <div class="showcase-text">
+                    <h3>Thug life</h3>
+                    <p>Feeling like a gangster</p>
+                </div>
+            </div>
+
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="boiz1.jpg" alt="Too much..."></div>
+                <div class="showcase-text">
+                    <h3>Too much...</h3>
+                    <p>Didn't count...</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="yeah.jpg" alt="Yeah boi"></div>
+                <div class="showcase-text">
+                    <h3>Yeah boi</h3>
+                    <p>If you know the meme...</p>
+                </div>
+            </div>
+
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="mini.jpg" alt="Mini me"></div>
+                <div class="showcase-text">
+                    <h3>Mini me</h3>
+                    <p>Younger me</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="boiz4.jpg" alt="I sacrifice..."></div>
+                <div class="showcase-text">
+                    <h3>I sacrifice...</h3>
+                    <p>It time to go</p>
+                </div>
+            </div>
+
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="toilet.jpg" alt="2pm night trip"></div>
+                <div class="showcase-text">
+                    <h3>2pm night trip</h3>
+                    <p>Going to be the last scene</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="theboiz.jpg" alt="The boiz traveling"></div>
+                <div class="showcase-text">
+                    <h3>The boiz traveling</h3>
+                    <p>Rare itstance of teh boiz going out</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="back-link">
+            <a href="Final-Project.html#gallery" class="btn">Back to Home</a>
+        </div>
+    </article>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=deguzmanallanjade@gmail.com" target="_blank" class="email-link">Email: deguzmanallanjade@gmail.com</a></p>
+            <p>Contact No.: 0923-675-9274</p>
+        </div>
+        
+        <div class="footer-right">
+            <p>&copy; Photo Missing. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            
+            // Find all the images in your showcase layout
+            var images = document.querySelectorAll('.showcase-img img');
+            
+            // Make each image clickable
+            images.forEach(function(img) {
+                // Add a pointer cursor so people know they can click it
+                img.style.cursor = "pointer";
+                
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt; // Uses the 'alt' text as the caption!
+                }
+            });
+            
+            // The logic to close the modal when you click the 'X'
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // The logic to close the modal if you click the dark background
+            modal.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

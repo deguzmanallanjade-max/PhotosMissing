@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebu Trip Part 2 | Photo Missing</title>
+	
+    <link rel="icon" href="Photos Logo.png" type="image/png">
+	
+    <link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Photo Missing</div>
+        <ul class="nav-links">
+            <li><a href="Final-Project.html">Home</a></li>
+            <li><a href="Final-Project.html#gallery">Vlogs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+   <header class="post-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bluecloud.jpg');">
+        <div class="hero-content">
+            <span class="category">Cebu Trip Part 2</span>
+            <h1>Photos Compilation</h1>
+            <p>Behind the lens of every frame is a story waiting to be told.</p>
+        </div>
+    </header>
+
+    <article class="container post-content">
+        <div class="post-text">
+            <p>I'll be showing the trip I went to Cebu, This is all the photo I use to show you some example of my work. the camera I use is <a href="https://www.sony.com.ph/interchangeable-lens-cameras/products/zv-e10" target="_blank" rel="noopener noreferrer">Sony ZV-E10</a> is good for beginner level of Photograhpy and Videography. </p>
+
+        </div>
+
+        <div class="photo-showcase">
+            
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="Water fall2.jpg" alt="Water Fall pose Idea"></div>
+                <div class="showcase-text">
+                    <h3>Water Fall pose Idea</h3>
+                    <p>This Photo is great for posting as myday or using as a profile.</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="Water fall3.jpg" alt="Enjoying the fall"></div>
+                <div class="showcase-text">
+                    <h3>Enjoying the fall</h3>
+                    <p>The rocky environment is useful for getting a few details in your photo.</p>
+                </div>
+            </div>
+
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="Water fall4.jpg" alt="The right spot for your subject"></div>
+                <div class="showcase-text">
+                    <h3>The right spot for your subject</h3>
+                    <p>This photo will show the subject facing the waterfall like looking amazed by the waterfall.</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="boat1.jpg" alt="Center subject"></div>
+                <div class="showcase-text">
+                    <h3>Center subject</h3>
+                    <p>Making the focus on the middle and adding some environment in the photo.</p>
+                </div>
+            </div>
+
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="waveview.jpg" alt="Blue Sea"></div>
+                <div class="showcase-text">
+                    <h3>Blue Sea</h3>
+                    <p>Adding the HUE color efefct make the sea a little blue.</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="waveview2.jpg" alt="Waving day"></div>
+                <div class="showcase-text">
+                    <h3>Waving day</h3>
+                    <p>Testing out the low light on my ZV-E10.</p>
+                </div>
+            </div>
+
+            <div class="showcase-row">
+                <div class="showcase-img"><img src="bluesea1.jpg" alt="Clear sea"></div>
+                <div class="showcase-text">
+                    <h3>Clear sea</h3>
+                    <p>Wondeful spot to get an arial view os the subject</p>
+                </div>
+            </div>
+
+            <div class="showcase-row reverse">
+                <div class="showcase-img"><img src="wideview.jpg" alt="Wide Angles View"></div>
+                <div class="showcase-text">
+                    <h3>Wide Angles View</h3>
+                    <p>The great sea of Cebu</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="back-link">
+            <a href="Final-Project.html#gallery" class="btn">Back to Home</a>
+        </div>
+    </article>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=deguzmanallanjade@gmail.com" target="_blank" class="email-link">Email: deguzmanallanjade@gmail.com</a></p>
+            <p>Contact No.: 0923-675-9274</p>
+        </div>
+        
+        <div class="footer-right">
+            <p>&copy; Photo Missing. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            
+            // Find all the images in your showcase layout
+            var images = document.querySelectorAll('.showcase-img img');
+            
+            // Make each image clickable
+            images.forEach(function(img) {
+                // Add a pointer cursor so people know they can click it
+                img.style.cursor = "pointer";
+                
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt; // Uses the 'alt' text as the caption!
+                }
+            });
+            
+            // The logic to close the modal when you click the 'X'
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // The logic to close the modal if you click the dark background
+            modal.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
